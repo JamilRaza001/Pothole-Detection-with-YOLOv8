@@ -528,11 +528,7 @@ def main():
             except:
                 st.info("📹 Original video preview not available in browser, but processing will work!")
             
-            # Get video info if FFmpeg is available
-            if ffmpeg_available:
-                video_info = get_video_info(temp_video_path)
-                if video_info:
-                    st.json({"Video Info": video_info.get('format', {})})
+
             
             # Process video with progress bar
             st.write("**Processing Video...**")
